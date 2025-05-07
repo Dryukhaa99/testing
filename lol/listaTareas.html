@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="listaTareas.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+<body>
+    <div class="filtro-categorias">
+        <label for="filtroCategoria" class="menu-label">cats</label>
+        <select name="filtroCategoria" id="filtroCategoria" class="menu-select" onchange="filtrar()">
+          <option value="">Todas</option>
+          <option value="Hogar">Hogar</option>
+          <option value="Trabajo">Trabajo</option>
+          <option value="Colegio">Colegio</option>
+        </select>
+      </div>
+    <header></header>
+    <main>
+        <div class="titulo">
+            <h1>Tareas</h1>
+        </div>
+        <div class="contenedor">
+            <div class="form">
+                <label for="titulo" class="label">Título</label>
+                <input type="text" id="titulo" class="input" required>
+                <label for="descripcion" class="label">Descripción</label>
+                <input type="text" id="descripcion" class="input" required>
+              
+                <div class="seleccion-contenedor">
+                  <select name="categorias" id="categoria" class="seleccion">
+                    <option value="Hogar" selected>Hogar</option>
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Colegio">Colegio</option>
+                  </select>
+                  <select name="prioridad" id="prioridad" class="seleccion">
+                    <option value="1" selected>alta</option>
+                    <option value="2">media</option>
+                    <option value="3">baja</option>
+                  </select>
+                  <button onclick="guardarTarea()" class="boton">Subir</button>
+                </div>
+            </div>
+            <div class="tarjetas" style="flex: 3;">
+
+            </div>
+        </div>
+    </main>
+</body>
+<script src="listaTarea.js"></script>
+</html>
